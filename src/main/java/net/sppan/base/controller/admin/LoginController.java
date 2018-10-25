@@ -1,5 +1,6 @@
 package net.sppan.base.controller.admin;
 
+import net.sppan.base.common.utils.MD5Utils;
 import net.sppan.base.controller.BaseController;
 
 import org.apache.shiro.SecurityUtils;
@@ -33,12 +34,12 @@ public class LoginController extends BaseController {
 		}
 		return "admin/login";
 	}
-	
+
 	@RequestMapping(value = { "/admin/logout" }, method = RequestMethod.GET)
 	public String logout() {
 		Subject subject = SecurityUtils.getSubject();
 		subject.logout();
 		return redirect("admin/login");
 	}
-	
+
 }

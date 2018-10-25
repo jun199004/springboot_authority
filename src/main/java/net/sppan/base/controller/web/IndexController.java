@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class IndexController extends BaseController{
-	
+
 	@Autowired
 	private IUserService userService;
-	
+
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	@RequestMapping(value={"/","/index"})
