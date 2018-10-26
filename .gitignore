@@ -27,4 +27,4 @@ target
 tale.sql
 *.md
 
-target
+target/
